@@ -1,0 +1,77 @@
+<!--
+Name: Patrick S. Foster
+Date: 31.08.2022
+Course: Web Application Development — Workbook Assignment 4
+Topic: Mortgage Repayment
+GitHub Repository: https://github.com/Patrick-S-Foster/wad-assignment-4
+Preview of Assignment: https://Patrick-S-Foster.github.io/wad-assignment-4/
+
+Since this HTML file references external files, the file hierarchy shown at the top of each file in Appendix A must be
+maintained. In addition, all the files must be served by a web server. Suitable examples include nginx, apache, or
+http-server.
+
+The 'script.js' file contains all the JavaScript code for the mortgage repayment calculator. Due to the constraints of
+the workbook assignment, only the JavaScript file is commented line by line. Note that some comments in the 'script.js'
+file contain HTML markup. This is to provide a more readable output when viewed within an IDE that supports JavaScript
+comments being displayed as tooltips.
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Workbook Assignment 4 | Mortgage Repayment</title>
+    <link href="styles.css" rel="stylesheet">
+    <script src="script.js" defer></script>
+</head>
+<body>
+
+<div class="container">
+    <form id="input-form">
+        <table>
+            <tbody>
+            <tr>
+                <td><label for="principal">Principal in €:</label></td>
+                <td><input class="currency-input" id="principal" min="1" name="principal" required type="number"
+                           value="200000"></td>
+            </tr>
+            <tr>
+                <td><label for="interest">Annual Interest Rate as %:</label></td>
+                <td><input id="interest" min="0" name="interest" required step=".01" type="number" value="6.5"></td>
+            </tr>
+            <tr>
+                <td><label for="term">Term in Years:</label></td>
+                <td><input id="term" max="100" min="1" name="term" required type="number" value="30"><br></td>
+            </tr>
+            <tr>
+                <td colspan="2"><input class="input-button" type="submit" value="Calculate"></td>
+            </tr>
+            </tbody>
+        </table>
+    </form>
+
+    <table id="amortization-table">
+        <thead class="header-accent">
+        <tr>
+            <th colspan="7" id="amortization-table-title"></th>
+        </tr>
+        <tr>
+            <th rowspan="2">Month #</th>
+            <th rowspan="2">Starting Balance</th>
+            <th colspan="2">Principal Paid</th>
+            <th colspan="2">Interest Paid</th>
+            <th rowspan="2">Ending Balance</th>
+        </tr>
+        <tr>
+            <th>Current Month</th>
+            <th>Total</th>
+            <th>Current Month</th>
+            <th>Total</th>
+        </tr>
+        </thead>
+        <tbody id="amortization-table-body">
+        </tbody>
+    </table>
+</div>
+
+</body>
+</html>

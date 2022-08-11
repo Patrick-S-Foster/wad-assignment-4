@@ -1,0 +1,48 @@
+.container {
+    display: flex;
+}
+
+td, th {
+    padding: 2px;
+}
+
+#input-form {
+    position: sticky;
+    align-self: flex-start;
+    top: 10px;
+    border: thin black solid;
+}
+
+.input-button {
+    width: 100%;
+}
+
+#amortization-table {
+    flex-grow: 1;
+    margin-left: 20px;
+    border: thin black solid;
+}
+
+#amortization-table th {
+    text-align: center;
+    border: 2px black solid;
+}
+
+#amortization-table td {
+    border: thin black solid;
+}
+
+#amortization-table td.year-row {
+    font-weight: bold;
+    text-align: center;
+    border: 2px black solid;
+}
+
+#amortization-table thead {
+    top: 11px;
+    position: sticky;
+}
+
+.header-accent {
+    background-color: lightgrey;
+}
